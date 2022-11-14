@@ -12,4 +12,15 @@ class Users extends Component
         $this->users = User::all();
         return view('livewire.users');
     }
+
+    public function borrar($id)
+    {
+        User::find($id)->delete();
+        // session()->flash('message', 'Registro eliminado correctamente');
+        // $this->alert('success', 'Registro eliminado correctamente!', [
+        //     'position' => 'center',
+        //     'timer' => 3000,
+        //     'toast' => true,
+        // ]);
+    }
 }

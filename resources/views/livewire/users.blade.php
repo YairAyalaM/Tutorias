@@ -46,9 +46,9 @@
 							<a href="#" class="text-gray-400 hover:text-gray-100  mx-2">
 								<i class="material-icons-outlined text-base">edit</i>
 							</a>
-							<a href="#" class="text-gray-400 hover:text-gray-100  ml-2">
+							<button wire:click="borrar({{$user->id}})" class="text-gray-400 hover:text-gray-100  ml-2">
 								<i class="material-icons-round text-base">delete_outline</i>
-							</a>
+							</button>
 						</td>
 					</tr>
 					@endforeach
