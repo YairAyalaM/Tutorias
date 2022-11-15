@@ -1,4 +1,5 @@
 <div>
+	@include('sweetalert::alert')
 	<!-- inicio de componente tabla -->
 	<!-- component -->
 	<script src="https://cdn.tailwindcss.com"></script>
@@ -44,9 +45,12 @@
 								<a href="#" class="text-gray-400 hover:text-gray-100  mx-2">
 									<i class="material-icons-outlined text-base">edit</i>
 								</a>
-								<button wire:click="borrar({{$user->id}})" class="text-gray-400 hover:text-gray-100  ml-2">
+								<a onclick="confirmation(event)" href="{{url('borrar', $user->id)}}" class="text-gray-400 hover:text-gray-100  ml-2">
+									<!-- <a onclick="confirmation(event)" class="text-gray-400 hover:text-gray-100  ml-2"> -->
 									<i class="material-icons-round text-base">delete_outline</i>
-								</button>
+								</a>
+
+								<a href="javascript:void(0)" wire:click.prevent='deleteConfirmation({{ $user->id }})' class="btn btn-sm btn-danger" style="padding: 1px 8px;">Delete</a>
 							</td>
 						</tr>
 						@endforeach
@@ -78,24 +82,43 @@
 			border-radius: .625rem 0 0 .625rem;
 		}
 	</style>
-	<script>
-		Swal.fire({
-			title: 'Are you sure?',
-			text: "You won't be able to revert this!",
-			icon: 'warning',
-			showCancelButton: true,
-			confirmButtonColor: '#3085d6',
-			cancelButtonColor: '#d33',
-			confirmButtonText: 'Yes, delete it!'
-		}).then((result) => {
-			if (result.isConfirmed) {
-				Swal.fire(
-					'Deleted!',
-					'Your file has been deleted.',
-					'success'
-				)
-			}
-		})
-	</script>
 	<!-- fin de componente tabla -->
+	@livewireScripts
+	<!-- scripts de se a eliminado correctamente -->
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<x-livewire-alert::scripts />
+
+	<!-- script de boton de confirmacion -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script>
+		window.addEventListener('show-delete-confirmation', event => {
+			Swal.fire({
+				title: 'Are you sure?',
+				text: "You won't be able to revert this!",
+				icon: 'warning',
+				showCancelButton: true,
+				confirmButtonColor: '#3085d6',
+				cancelButtonColor: '#d33',
+				confirmButtonText: 'Yes, Delete'
+			}).then((result) => {
+				if (result.isConfirmed) {
+					livewire.emit('deleteConfirmed')
+				}
+			})
+		})
+
+
+		//confirmacion
+		window.addEventListener('FileDeleted', event => {
+			Swal.fire(
+				'Deleted!',
+				'Your file has been deleted.',
+				'success'
+			)
+		});
+	</script>
+
+
+
 </div>
