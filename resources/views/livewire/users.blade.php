@@ -45,12 +45,10 @@
 								<a href="#" class="text-gray-400 hover:text-gray-100  mx-2">
 									<i class="material-icons-outlined text-base">edit</i>
 								</a>
-								<a onclick="confirmation(event)" href="{{url('borrar', $user->id)}}" class="text-gray-400 hover:text-gray-100  ml-2">
+								<a ref="javascript:void(0)" wire:click.prevent='deleteConfirmation({{ $user->id }})' class="text-gray-400 hover:text-gray-100  ml-2">
 									<!-- <a onclick="confirmation(event)" class="text-gray-400 hover:text-gray-100  ml-2"> -->
 									<i class="material-icons-round text-base">delete_outline</i>
 								</a>
-
-								<a href="javascript:void(0)" wire:click.prevent='deleteConfirmation({{ $user->id }})' class="btn btn-sm btn-danger" style="padding: 1px 8px;">Delete</a>
 							</td>
 						</tr>
 						@endforeach
