@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\SortController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +28,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::post('/sort/posts',[SortController::class, 'posts'])->name('api.sort.posts');

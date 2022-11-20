@@ -106,7 +106,15 @@
 		new Sortable(table, {
 			handle: '.handle', //handle permite mover solo elementos que tengan la clase handle
 			animation: 150,
-			ghostClass: 'bg-blue-100'
+			ghostClass: 'bg-blue-100',
+			store: {
+				set: function(sortable){
+					const sorts = sortable.toArray();
+					axios.post("{{route('api.sort.posts')}}",{
+						sorts: sorts
+					})
+				}
+			}
 		});
 	</script>
 	<!-- scripts de se a eliminado correctamente -->

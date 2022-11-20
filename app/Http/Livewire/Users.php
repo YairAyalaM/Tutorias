@@ -13,11 +13,12 @@ class Users extends Component
     use LivewireAlert;
     public $delete_id;
     protected $listeners = ['deleteConfirmed' => 'delete'];
-    public $users,$name,$email,$password,$id_user;
+    public $users,$name,$email,$password,$id_user,$position;
     public $modal = false;
     public function render()
     {
-        $this->users = User::all();
+        // $this->users = User::all();
+        $this->users = User::orderBy('position', 'asc')->get();
         return view('livewire.users');
     }
 
@@ -49,6 +50,7 @@ class Users extends Component
         $this->name = $user->name;
         $this->email = $user->email;
         $this->password = $user->password;
+        $this->position = $id;
         // Storage::url($this->image->store('public/images'));
         $this->abrirModal();
     }
@@ -71,16 +73,28 @@ class Users extends Component
         // $image=$this->image->store('public/images');
         // $url = Storage::url($image);
 
-        User::updateOrCreate(['id'=>$this->id_user],
+        $user=User::updateOrCreate(['id'=>$this->id_user],
             [
                 'name' => $this->name,
                 'email' => $this->email,
-                'password' => $this->password
+                'password' => $this->password,
+                $position = $this->id_user,
+                // 'position' => $position,
                 // 'image' => $this->image->store('public/images')
                 //Storage::url es para cambiar la ruta a storage, debemos importar: use Illuminate\Support\Facades\Storage;
                 // 'image' => Storage::url($this->image->store('public/images'))
             ]);
-         
+
+            // funcion para igual la posicion con el id
+            if(is_null($position)){
+                User::where('id',$user->id)->update([
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'password' => $user->password,
+                    'position' => $user->id,
+                ]);
+            }
+
         //  session()->flash('message',
         //     $this->id_asociacion ? '¡Actualización exitosa!' : '¡Alta Exitosa!');
         $this->alert('success', 'Alta exitosa!', [
