@@ -172,16 +172,65 @@
                     <div class="flex flex-col lg:flex-row  gap-4 mb-4">
                         <!-- aqui van los inputs -->
                         <div class="mb-4">
+                            <label for="matricula" class="block text-gray-700 text-sm font-bold mb-2">Matricula:</label>
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="matricula" wire:model="matricula">
+                        </div>
+                        <div class="mb-4">
                             <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
                             <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="nombre" wire:model="nombre">
                         </div>
 
-                        <!-- <div class="mb-4">
-                            <label for="id_user" class="block text-gray-700 text-sm font-bold mb-2">Tutor:</label>
-                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" value="1" id="id_user" name="id_user">
-                        </div> -->
+                        <div class="mb-4">
+                            <label for="apellido" class="block text-gray-700 text-sm font-bold mb-2">Apellido:</label>
+                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="apellido" wire:model="apellido">
+                        </div>
                     </div>
 
+
+                    <div class="flex flex-col lg:flex-row  gap-4 mb-4">
+                        <!-- aqui van los inputs -->
+                        <div class="mb-4">
+                            <label for="carrera" class="block text-gray-700 text-sm font-bold mb-2">Carrera:</label>
+                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="carrera" wire:model="carrera">
+                        </div>
+                        <div class="mb-4">
+                            <label for="semestre" class="block text-gray-700 text-sm font-bold mb-2">Semestre:</label>
+                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="semestre" wire:model="semestre">
+                        </div>
+                    </div>
+
+
+                    <div class="flex flex-col lg:flex-row  gap-4 mb-4">
+                        <!-- aqui van los inputs -->
+                        <div class="mb-4">
+                            <label for="materia1" class="block text-gray-700 text-sm font-bold mb-2">materia1:</label>
+                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="materia1" wire:model="materia1">
+                        </div>
+                        <div class="mb-4">
+                            <label for="materia2" class="block text-gray-700 text-sm font-bold mb-2">materia1:</label>
+                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="materia2" wire:model="materia2">
+                        </div>
+                        <div class="mb-4">
+                            <label for="materia3" class="block text-gray-700 text-sm font-bold mb-2">materia1:</label>
+                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="materia3" wire:model="materia3">
+                        </div>
+                        <div class="mb-4">
+                            <label for="materia4" class="block text-gray-700 text-sm font-bold mb-2">materia1:</label>
+                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="materia4" wire:model="materia4">
+                        </div>
+                        <div class="mb-4">
+                            <label for="materia5" class="block text-gray-700 text-sm font-bold mb-2">materia1:</label>
+                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="materia5" wire:model="materia5">
+                        </div>
+                        <div class="mb-4">
+                            <label for="materia6" class="block text-gray-700 text-sm font-bold mb-2">materia1:</label>
+                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="materia6" wire:model="materia6">
+                        </div>
+                        <div class="mb-4">
+                            <label for="materia7" class="block text-gray-700 text-sm font-bold mb-2">materia1:</label>
+                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="materia7" wire:model="materia7">
+                        </div>
+                    </div>
                    
 
                     <!-- <div class="flex flex-col lg:flex-row  gap-4 mb-4">
@@ -190,6 +239,10 @@
                             <input type="file" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="image" wire:model="image">
                         </div>
                     </div> -->
+                    <input type="button" id="add_field" value="adicionar">
+<br>
+<div id="listas">
+    <div><input type="text" name="campo[]"></div>
 
 
                 </div>
@@ -205,4 +258,27 @@
             </form>
         </div>
     </div>
+    @livewireScripts
+    <script>
+        var campos_max          = 10;   //max de 10 campos
+
+var x = 0;
+$('#add_field').click (function(e) {
+        e.preventDefault();     //prevenir novos clicks
+        if (x < campos_max) {
+                $('#listas').append('<div>\
+                        <input type="text" name="campo[]">\
+                        <a href="#" class="remover_campo">Remover</a>\
+                        </div>');
+                x++;
+        }
+});
+// Remover o div anterior
+$('#listas').on("click",".remover_campo",function(e) {
+        e.preventDefault();
+        $(this).parent('div').remove();
+        x--;
+});
+
+    </script>
 </div>

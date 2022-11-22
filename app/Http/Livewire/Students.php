@@ -12,7 +12,8 @@ class Students extends Component
     public $delete_id;
     protected $listeners = ['deleteConfirmed' => 'delete'];
 
-    public $students,$nombre,$id_user,$id_student,$position;
+    public $students,$matricula,$nombre,$apellido,$carrera,$semestre,$id_user,$id_student,$position;
+    public $materia1,$materia2,$materia3,$materia4,$materia5,$materia6,$materia7;
     public $modal = false;
     public function render()
     {
@@ -35,14 +36,36 @@ class Students extends Component
     }
 
     public function limpiarCampos(){
+        $this->matricula = '';
         $this->nombre = '';
+        $this->apellido = '';
+        $this->carrera = '';
+        $this->semestre = '';
+        $this->materia1 = '';
+        $this->materia2 = '';
+        $this->materia3 = '';
+        $this->materia4 = '';
+        $this->materia5 = '';
+        $this->materia6 = '';
+        $this->materia7 = '';
     }
 
     public function editar($id)
     {
         $student = Student::findOrFail($id);
         $this->id_student = $id;
+        $this->matricula = $student->matricula;
         $this->nombre = $student->nombre;
+        $this->apellido = $student->apellido;
+        $this->carrera = $student->carrera;
+        $this->semestre = $student->semestre;
+        $this->materia1 = $student->materia1;
+        $this->materia2 = $student->materia2;
+        $this->materia3 = $student->materia3;
+        $this->materia4 = $student->materia4;
+        $this->materia5 = $student->materia5;
+        $this->materia6 = $student->materia6;
+        $this->materia7 = $student->materia7;
         $this->id_user = $student->id_user;
         // Storage::url($this->image->store('public/images'));
         $this->abrirModal();
@@ -68,7 +91,18 @@ class Students extends Component
 
         Student::updateOrCreate(['id'=>$this->id_student],
             [
+                'matricula' => $this->matricula,
                 'nombre' => $this->nombre,
+                'apellido' => $this->apellido,
+                'carrera' => $this->carrera,
+                'semestre' => $this->semestre,
+                'materia1' => $this->materia1,
+                'materia2' => $this->materia2,
+                'materia3' => $this->materia3,
+                'materia4' => $this->materia4,
+                'materia5' => $this->materia5,
+                'materia6' => $this->materia6,
+                'materia7' => $this->materia7,
                 'id_user' => auth()->id(),
                 // 'position' => $position,
                 // 'image' => $this->image->store('public/images')
