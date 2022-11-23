@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Student;
+use App\Models\Lesson;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Students extends Component
@@ -15,6 +16,13 @@ class Students extends Component
     public $students,$matricula,$nombre,$apellido,$carrera,$semestre,$id_user,$id_student,$position;
     public $materia1,$materia2,$materia3,$materia4,$materia5,$materia6,$materia7;
     public $modal = false;
+
+    //lesson variables
+    public $lessons,$id_userLesson,$id_studentLesson,$id_lesson;
+    public $modalLesson = false;
+    public $delete_idLesson;
+    protected $listeners2 = ['deleteConfirmed' => 'delete'];
+
     public function render()
     {
         $this->students = Student::all();
@@ -119,5 +127,71 @@ class Students extends Component
          
          $this->cerrarModal();
          $this->limpiarCampos();
+    }
+
+    //Lessons
+    public function crearLesson()
+    {
+        $this->limpiarCamposLesson();
+        $this->abrirModalLesson();
+    }
+
+    public function abrirModalLesson() {
+        $this->modalLesson = true;
+    }
+    public function cerrarModalLesson() {
+        $this->modalLesson = false;
+    }
+
+    public function limpiarCamposLesson(){
+        
+    }
+    public function editarLesson($id)
+    {
+        $lesson = Lesson::findOrFail($id);
+        $this->id_lesson = $id;
+        $this->id_userLesson = $lesson->id_user;
+        $this->id_studentLesson = $lesson->id_student;
+        // Storage::url($this->image->store('public/images'));
+        $this->abrirModal();
+    }
+
+    public function deleteLesson(){
+        $lesson = Lesson::where('id',$this->delete_idLesson)->first();
+        $lesson->delete();
+
+        $this->dispatchBrowserEvent('FileDeleted');
+    }
+
+    public function deleteConfirmationLesson($id){
+        $this->delete_idLesson = $id;
+        $this->dispatchBrowserEvent('show-delete-confirmation');
+    }
+
+    public function guardarLesson()
+    {
+
+        // $image=$this->image->store('public/images');
+        // $url = Storage::url($image);
+
+        Lesson::updateOrCreate(['id'=>$this->id_lesson],
+            [
+                'id_student' => $this->id_studentLesson,
+                'id_user' => auth()->id(),
+                // 'position' => $position,
+                // 'image' => $this->image->store('public/images')
+                //Storage::url es para cambiar la ruta a storage, debemos importar: use Illuminate\Support\Facades\Storage;
+                // 'image' => Storage::url($this->image->store('public/images'))
+            ]);
+        //  session()->flash('message',
+        //     $this->id_asociacion ? '¡Actualización exitosa!' : '¡Alta Exitosa!');
+        $this->alert('success', 'Alta exitosa!', [
+            'position' => 'center',
+            'timer' => 3000,
+            'toast' => true,
+           ]);
+         
+         $this->cerrarModalLesson();
+         $this->limpiarCamposLesson();
     }
 }
