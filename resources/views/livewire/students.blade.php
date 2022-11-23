@@ -12,7 +12,10 @@
 					@include('livewire.crearStudent')
 					@endif
 					<div>
-						<button wire:click="crear()" class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Nuevo</button>
+						<button wire:click="crear()" class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
+</svg>
+</button>
 					</div>
 					<label for="table-search" class="sr-only">Search</label>
 					<div class="relative">
@@ -27,9 +30,9 @@
 				<table class="table text-gray-400 border-separate space-y-6 text-sm">
 					<thead class="bg-gray-800 text-gray-500">
 						<tr>
-							<th class="p-3">Brand</th>
-							<th class="p-3 text-left">Category</th>
-							<th class="p-3 text-left">Price</th>
+							<th class="p-3">Alumno</th>
+							<th class="p-3 text-left">Carrera</th>
+							<th class="p-3 text-left">Semestre</th>
 							<th class="p-3 text-left">Status</th>
 							<th class="p-3 text-left">Action</th>
 						</tr>
@@ -41,16 +44,16 @@
 								<div class="flex align-items-center">
 									<img class="handle cursor-grab rounded-full h-12 w-12  object-cover" src="https://images.unsplash.com/photo-1613588718956-c2e80305bf61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80" alt="unsplash image">
 									<div class="ml-3">
-										<div class="">{{$student->nombre}}</div>
-										<div class="text-gray-500">{{$student->nombre}}</div>
+										<div class="">{{$student->nombre}} {{$student->apellido}}</div>
+										<div class="text-gray-500">{{$student->matricula}}@upslp.edu.com</div>
 									</div>
 								</div>
 							</td>
 							<td class="p-3">
-								{{$student->nombre}}
+								{{$student->carrera}}
 							</td>
 							<td class="p-3 font-bold">
-								{{$student->nombre}}
+								{{$student->semestre}}
 							</td>
 							<td class="p-3">
 								<span class="bg-green-400 text-gray-50 rounded-md px-2">available</span>

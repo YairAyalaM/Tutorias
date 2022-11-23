@@ -239,11 +239,6 @@
                             <input type="file" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="image" wire:model="image">
                         </div>
                     </div> -->
-                    <input type="button" id="add_field" value="adicionar">
-<br>
-<div id="listas">
-    <div><input type="text" name="campo[]"></div>
-
 
                 </div>
                 <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
@@ -258,27 +253,4 @@
             </form>
         </div>
     </div>
-    @livewireScripts
-    <script>
-        var campos_max          = 10;   //max de 10 campos
-
-var x = 0;
-$('#add_field').click (function(e) {
-        e.preventDefault();     //prevenir novos clicks
-        if (x < campos_max) {
-                $('#listas').append('<div>\
-                        <input type="text" name="campo[]">\
-                        <a href="#" class="remover_campo">Remover</a>\
-                        </div>');
-                x++;
-        }
-});
-// Remover o div anterior
-$('#listas').on("click",".remover_campo",function(e) {
-        e.preventDefault();
-        $(this).parent('div').remove();
-        x--;
-});
-
-    </script>
 </div>
