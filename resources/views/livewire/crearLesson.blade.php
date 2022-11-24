@@ -169,41 +169,36 @@
 
                     <!-- new form -->
 
-                    <div class="flex flex-col lg:flex-row  gap-4 mb-4">
-                        <!-- aqui van los inputs -->
-                        <div class="mb-4">
-                            <label for="id_studentLesson" class="block text-gray-700 text-sm font-bold mb-2">Alumno:</label>
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                        </div>
-                    </div>
+                   
 
-                    <div class="flex flex-col lg:flex-row  gap-4 mb-4">
-                        <!-- aqui van los inputs -->
-                        <div class="mb-4">
-                            <label for="id_studentLesson" class="block text-gray-700 text-sm font-bold mb-2">Materias Regulares:</label>
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                        </div>
-                    </div>
+                   
+<div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="py-3 px-6">
+                    Product name
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    Color
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Apple MacBook Pro 17"
+                </th>
+                <td class="py-4 px-6">
+                    Sliver
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-                    <div class="flex flex-col lg:flex-row  gap-4 mb-4">
-                        <!-- aqui van los inputs -->
-                        <div class="mb-4">
-                            <label for="id_studentLesson" class="block text-gray-700 text-sm font-bold mb-2">Materias Reprobadas:</label>
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
-                        </div>
-                    </div>
+
+                    
 
                    
 

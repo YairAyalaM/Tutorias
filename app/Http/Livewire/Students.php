@@ -115,6 +115,13 @@ class Students extends Component
                 'materia5' => $this->materia5,
                 'materia6' => $this->materia6,
                 'materia7' => $this->materia7,
+                'status1' => null,
+                'status2' => null,
+                'status3' => null,
+                'status4' => null,
+                'status5' => null,
+                'status6' => null,
+                'status7' => null,
                 'id_user' => auth()->id(),
                 // 'position' => $position,
                 // 'image' => $this->image->store('public/images')
