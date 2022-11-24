@@ -177,6 +177,34 @@
                         </div>
                     </div>
 
+                    <div class="flex flex-col lg:flex-row  gap-4 mb-4">
+                        <!-- aqui van los inputs -->
+                        <div class="mb-4">
+                            <label for="id_studentLesson" class="block text-gray-700 text-sm font-bold mb-2">Materias Regulares:</label>
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row  gap-4 mb-4">
+                        <!-- aqui van los inputs -->
+                        <div class="mb-4">
+                            <label for="id_studentLesson" class="block text-gray-700 text-sm font-bold mb-2">Materias Reprobadas:</label>
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
+                            <input type="number" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="id_studentLesson" wire:model="id_studentLesson">
+                        </div>
+                    </div>
+
                    
 
                     <!-- <div class="flex flex-col lg:flex-row  gap-4 mb-4">
