@@ -1,4 +1,8 @@
 <div class="fixed z-10 inset-0 overflow-y-auto ease-out duration-400">
+    <!-- estilos solo para el select -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+    <!-- end estilos solo para el select -->
     <style>
         .scrollEdit::-webkit-scrollbar {
             width: 6px;
@@ -199,39 +203,65 @@
                         </div>
                     </div>
 
+                    <!-- materias -->
 
-                    <div class="flex flex-col lg:flex-row  gap-4 mb-4">
-                        <!-- aqui van los inputs -->
-                        <div class="mb-4">
-                            <label for="materia1" class="block text-gray-700 text-sm font-bold mb-2">materia1:</label>
-                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="materia1" wire:model="materia1">
-                        </div>
-                        <div class="mb-4">
-                            <label for="materia2" class="block text-gray-700 text-sm font-bold mb-2">materia1:</label>
-                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="materia2" wire:model="materia2">
-                        </div>
-                        <div class="mb-4">
-                            <label for="materia3" class="block text-gray-700 text-sm font-bold mb-2">materia1:</label>
-                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="materia3" wire:model="materia3">
-                        </div>
-                        <div class="mb-4">
-                            <label for="materia4" class="block text-gray-700 text-sm font-bold mb-2">materia1:</label>
-                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="materia4" wire:model="materia4">
-                        </div>
-                        <div class="mb-4">
-                            <label for="materia5" class="block text-gray-700 text-sm font-bold mb-2">materia1:</label>
-                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="materia5" wire:model="materia5">
-                        </div>
-                        <div class="mb-4">
-                            <label for="materia6" class="block text-gray-700 text-sm font-bold mb-2">materia1:</label>
-                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="materia6" wire:model="materia6">
-                        </div>
-                        <div class="mb-4">
-                            <label for="materia7" class="block text-gray-700 text-sm font-bold mb-2">materia1:</label>
-                            <input type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="materia7" wire:model="materia7">
-                        </div>
-                    </div>
-                   
+                    <label for="materia1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                    <select id="materia1" wire:model="materia1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Materia 1</option>
+                        @foreach($materias as $materia)
+                        <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                        @endforeach
+                    </select>
+
+                    <label for="materia2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                    <select id="materia2" wire:model="materia2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Materia 2</option>
+                        @foreach($materias as $materia)
+                        <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                        @endforeach
+                    </select>
+
+                    <label for="materia3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                    <select id="materia3" wire:model="materia3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Materia 3</option>
+                        @foreach($materias as $materia)
+                        <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                        @endforeach
+                    </select>
+
+                    <label for="materia4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                    <select id="materia4" wire:model="materia4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Materia 4</option>
+                        @foreach($materias as $materia)
+                        <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                        @endforeach
+                    </select>
+
+                    <label for="materia5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                    <select id="materia5" wire:model="materia5" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Materia 5</option>
+                        @foreach($materias as $materia)
+                        <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                        @endforeach
+                    </select>
+
+                    <label for="materia6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                    <select id="materia6" wire:model="materia6" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Materia 6</option>
+                        @foreach($materias as $materia)
+                        <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                        @endforeach
+                    </select>
+
+                    <label for="materia7" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                    <select id="materia7" wire:model="materia7" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Materia 7</option>
+                        @foreach($materias as $materia)
+                        <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                        @endforeach
+                    </select>
+
+                    <!-- end materias -->
 
                     <!-- <div class="flex flex-col lg:flex-row  gap-4 mb-4">
                         <div class="mb-4">

@@ -5,6 +5,8 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Student;
 use App\Models\Lesson;
+use App\Models\Subject;
+
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Students extends Component
@@ -16,6 +18,7 @@ class Students extends Component
     public $students,$matricula,$nombre,$apellido,$carrera,$semestre,$id_user,$id_student,$position;
     public $materia1,$materia2,$materia3,$materia4,$materia5,$materia6,$materia7;
     public $modal = false;
+    public $materias;
 
     //lesson variables
     public $lessons,$id_userLesson,$id_studentLesson,$id_lesson;
@@ -26,6 +29,7 @@ class Students extends Component
     public function render()
     {
         $this->students = Student::all();
+        $this->materias = Subject::all();
         return view('livewire.students');
     }
 
