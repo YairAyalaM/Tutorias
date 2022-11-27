@@ -173,241 +173,308 @@
 
                     <!-- new form -->
 
-                    
 
 
-                    
+
+
 
                     <!-- materias -->
 
                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                <tr>
-                                    <th scope="col" class="py-3 px-6">
-                                        Materias
-                                    </th>
-                                    <th scope="col" class="py-3 px-6">
-                                        Status
-                                    </th>
-                                    <th scope="col" class="py-3 px-6">
-                                        A/NA
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        <!-- <label for="materia1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
-                                        <select disabled id="materia1" wire:model="materia1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option selected>Materia 1</option>
-                                            @foreach($materias as $materia)
-                                            <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
-                                            @endforeach
-                                        </select>
-                                    </th>
-                                    <td class="py-4 px-6">
-                                        <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select disabled wire:model="status1" id="status1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Regular</option>
-                                            <option value="1">Recursada</option>
-                                        </select>
-                                    </td>
-                                    <td class="py-4 px-6">
-                                        <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select wire:model="aprobada1" id="aprobada1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Aprobada</option>
-                                            <option value="1">Reprobada</option>
-                                        </select>
-                                    </td>
-                                </tr>
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="py-3 px-6">
+                                    Materias
+                                </th>
+                                <th scope="col" class="py-3 px-6">
+                                    Status
+                                </th>
+                                <th scope="col" class="py-3 px-6">
+                                    A/NA
+                                </th>
+                                <th scope="col" class="py-3 px-6">
+                                    Calificación
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <!-- <label for="materia1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
+                                    <select disabled id="materia1" wire:model="materia1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected>Materia 1</option>
+                                        @foreach($materias as $materia)
+                                        <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                                        @endforeach
+                                    </select>
+                                </th>
+                                <td class="py-4 px-6">
+                                    <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
+                                    <select disabled wire:model="status1" id="status1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="0" selected>Seleccionar</option>
+                                        <option value="0">Regular</option>
+                                        <option value="1">Recursada</option>
+                                    </select>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
+                                    <select wire:model="aprobada1" id="aprobada1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="0" selected>Seleccionar</option>
+                                        <option value="0">Aprobada</option>
+                                        <option value="1">Reprobada</option>
+                                    </select>
+                                </td>
 
-                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        <!-- <label for="materia2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
-                                        <select disabled id="materia2" wire:model="materia2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option selected>Materia 1</option>
-                                            @foreach($materias as $materia)
-                                            <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
-                                            @endforeach
-                                        </select>
-                                    </th>
-                                    <td class="py-4 px-6">
-                                        <!-- <label for="status2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select disabled wire:model="status2" id="status2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Regular</option>
-                                            <option value="1">Recursada</option>
-                                        </select>
-                                    </td>
+                                <td class="py-4 px-6">
+                                    <div class="mb-4">
+                                        <input wire:model="cal1" id="cal1" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor">
+                                    </div>
+                                </td>
 
-                                    <td class="py-4 px-6">
-                                        <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select wire:model="aprobada2" id="aprobada2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Aprobada</option>
-                                            <option value="1">Reprobada</option>
-                                        </select>
-                                    </td>
-                                </tr>
+                            </tr>
 
-                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        <!-- <label for="materia3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
-                                        <select disabled id="materia3" wire:model="materia3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option selected>Materia 1</option>
-                                            @foreach($materias as $materia)
-                                            <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
-                                            @endforeach
-                                        </select>
-                                    </th>
-                                    <td class="py-4 px-6">
-                                        <!-- <label for="status3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select disabled wire:model="status3" id="status3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Regular</option>
-                                            <option value="1">Recursada</option>
-                                        </select>
-                                    </td>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <!-- <label for="materia2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
+                                    <select disabled id="materia2" wire:model="materia2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected>Materia 1</option>
+                                        @foreach($materias as $materia)
+                                        <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                                        @endforeach
+                                    </select>
+                                </th>
+                                <td class="py-4 px-6">
+                                    <!-- <label for="status2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
+                                    <select disabled wire:model="status2" id="status2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="0" selected>Seleccionar</option>
+                                        <option value="0">Regular</option>
+                                        <option value="1">Recursada</option>
+                                    </select>
+                                </td>
 
-                                    <td class="py-4 px-6">
-                                        <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select wire:model="aprobada3" id="aprobada3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Aprobada</option>
-                                            <option value="1">Reprobada</option>
-                                        </select>
-                                    </td>
-                                </tr>
+                                <td class="py-4 px-6">
+                                    <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
+                                    <select wire:model="aprobada2" id="aprobada2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="0" selected>Seleccionar</option>
+                                        <option value="0">Aprobada</option>
+                                        <option value="1">Reprobada</option>
+                                    </select>
+                                </td>
 
-                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        <!-- <label for="materia4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
-                                        <select disabled id="materia4" wire:model="materia4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option selected>Materia 1</option>
-                                            @foreach($materias as $materia)
-                                            <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
-                                            @endforeach
-                                        </select>
-                                    </th>
-                                    <td class="py-4 px-6">
-                                        <!-- <label for="status4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select disabled wire:model="status4" id="status4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Regular</option>
-                                            <option value="1">Recursada</option>
-                                        </select>
-                                    </td>
+                                <td class="py-4 px-6">
+                                    <div class="mb-4">
+                                        <input wire:model="cal2" id="cal2" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor">
+                                    </div>
+                                </td>
+                            </tr>
 
-                                    <td class="py-4 px-6">
-                                        <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select wire:model="aprobada4" id="aprobada4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Aprobada</option>
-                                            <option value="1">Reprobada</option>
-                                        </select>
-                                    </td>
-                                </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <!-- <label for="materia3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
+                                    <select disabled id="materia3" wire:model="materia3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected>Materia 1</option>
+                                        @foreach($materias as $materia)
+                                        <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                                        @endforeach
+                                    </select>
+                                </th>
+                                <td class="py-4 px-6">
+                                    <!-- <label for="status3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
+                                    <select disabled wire:model="status3" id="status3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="0" selected>Seleccionar</option>
+                                        <option value="0">Regular</option>
+                                        <option value="1">Recursada</option>
+                                    </select>
+                                </td>
 
-                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        <!-- <label for="materia5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
-                                        <select disabled id="materia5" wire:model="materia5" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option selected>Materia 1</option>
-                                            @foreach($materias as $materia)
-                                            <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
-                                            @endforeach
-                                        </select>
-                                    </th>
-                                    <td class="py-4 px-6">
-                                        <!-- <label for="status5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select disabled wire:model="status5" id="status5" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Regular</option>
-                                            <option value="1">Recursada</option>
-                                        </select>
-                                    </td>
+                                <td class="py-4 px-6">
+                                    <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
+                                    <select wire:model="aprobada3" id="aprobada3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="0" selected>Seleccionar</option>
+                                        <option value="0">Aprobada</option>
+                                        <option value="1">Reprobada</option>
+                                    </select>
+                                </td>
 
-                                    <td class="py-4 px-6">
-                                        <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select wire:model="aprobada5" id="aprobada5" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Aprobada</option>
-                                            <option value="1">Reprobada</option>
-                                        </select>
-                                    </td>
-                                </tr>
+                                <td class="py-4 px-6">
+                                    <div class="mb-4">
+                                        <input wire:model="cal3" id="cal3" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor">
+                                    </div>
+                                </td>
+                            </tr>
 
-                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        <!-- <label for="materia6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
-                                        <select disabled id="materia6" wire:model="materia6" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option selected>Materia 1</option>
-                                            @foreach($materias as $materia)
-                                            <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
-                                            @endforeach
-                                        </select>
-                                    </th>
-                                    <td class="py-4 px-6">
-                                        <!-- <label for="status6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select disabled wire:model="status6" id="status6" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Regular</option>
-                                            <option value="1">Recursada</option>
-                                        </select>
-                                    </td>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <!-- <label for="materia4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
+                                    <select disabled id="materia4" wire:model="materia4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected>Materia 1</option>
+                                        @foreach($materias as $materia)
+                                        <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                                        @endforeach
+                                    </select>
+                                </th>
+                                <td class="py-4 px-6">
+                                    <!-- <label for="status4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
+                                    <select disabled wire:model="status4" id="status4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="0" selected>Seleccionar</option>
+                                        <option value="0">Regular</option>
+                                        <option value="1">Recursada</option>
+                                    </select>
+                                </td>
 
-                                    <td class="py-4 px-6">
-                                        <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select wire:model="aprobada6" id="aprobada6" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Aprobada</option>
-                                            <option value="1">Reprobada</option>
-                                        </select>
-                                    </td>
-                                </tr>
+                                <td class="py-4 px-6">
+                                    <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
+                                    <select wire:model="aprobada4" id="aprobada4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="0" selected>Seleccionar</option>
+                                        <option value="0">Aprobada</option>
+                                        <option value="1">Reprobada</option>
+                                    </select>
+                                </td>
 
-                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        <!-- <label for="materia7" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
-                                        <select disabled id="materia7" wire:model="materia7" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option selected>Materia 1</option>
-                                            @foreach($materias as $materia)
-                                            <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
-                                            @endforeach
-                                        </select>
-                                    </th>
-                                    <td class="py-4 px-6">
-                                        <!-- <label for="status7" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select disabled wire:model="status7" id="status7" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Regular</option>
-                                            <option value="1">Recursada</option>
-                                        </select>
-                                    </td>
+                                <td class="py-4 px-6">
+                                    <div class="mb-4">
+                                        <input wire:model="cal4" id="cal4" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor">
+                                    </div>
+                                </td>
+                            </tr>
 
-                                    <td class="py-4 px-6">
-                                        <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select wire:model="aprobada7" id="aprobada7" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Aprobada</option>
-                                            <option value="1">Reprobada</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <!-- <label for="materia5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
+                                    <select disabled id="materia5" wire:model="materia5" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected>Materia 1</option>
+                                        @foreach($materias as $materia)
+                                        <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                                        @endforeach
+                                    </select>
+                                </th>
+                                <td class="py-4 px-6">
+                                    <!-- <label for="status5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
+                                    <select disabled wire:model="status5" id="status5" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="0" selected>Seleccionar</option>
+                                        <option value="0">Regular</option>
+                                        <option value="1">Recursada</option>
+                                    </select>
+                                </td>
 
-                    
+                                <td class="py-4 px-6">
+                                    <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
+                                    <select wire:model="aprobada5" id="aprobada5" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="0" selected>Seleccionar</option>
+                                        <option value="0">Aprobada</option>
+                                        <option value="1">Reprobada</option>
+                                    </select>
+                                </td>
 
-                    
+                                <td class="py-4 px-6">
+                                    <div class="mb-4">
+                                        <input wire:model="cal5" id="cal5" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor">
+                                    </div>
+                                </td>
+                            </tr>
 
-                    
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <!-- <label for="materia6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
+                                    <select disabled id="materia6" wire:model="materia6" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected>Materia 1</option>
+                                        @foreach($materias as $materia)
+                                        <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                                        @endforeach
+                                    </select>
+                                </th>
+                                <td class="py-4 px-6">
+                                    <!-- <label for="status6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
+                                    <select disabled wire:model="status6" id="status6" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="0" selected>Seleccionar</option>
+                                        <option value="0">Regular</option>
+                                        <option value="1">Recursada</option>
+                                    </select>
+                                </td>
 
-                   
+                                <td class="py-4 px-6">
+                                    <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
+                                    <select wire:model="aprobada6" id="aprobada6" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="0" selected>Seleccionar</option>
+                                        <option value="0">Aprobada</option>
+                                        <option value="1">Reprobada</option>
+                                    </select>
+                                </td>
 
-                    
+                                <td class="py-4 px-6">
+                                    <div class="mb-4">
+                                        <input wire:model="cal6" id="cal6" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor">
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <!-- <label for="materia7" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
+                                    <select disabled id="materia7" wire:model="materia7" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected>Materia 1</option>
+                                        @foreach($materias as $materia)
+                                        <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                                        @endforeach
+                                    </select>
+                                </th>
+                                <td class="py-4 px-6">
+                                    <!-- <label for="status7" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
+                                    <select disabled wire:model="status7" id="status7" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="0" selected>Seleccionar</option>
+                                        <option value="0">Regular</option>
+                                        <option value="1">Recursada</option>
+                                    </select>
+                                </td>
+
+                                <td class="py-4 px-6">
+                                    <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
+                                    <select wire:model="aprobada7" id="aprobada7" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="0" selected>Seleccionar</option>
+                                        <option value="0">Aprobada</option>
+                                        <option value="1">Reprobada</option>
+                                    </select>
+                                </td>
+
+                                <td class="py-4 px-6">
+                                    <div class="mb-4">
+                                        <input wire:model="cal7" id="cal7" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor">
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                            <!-- Promedio -->
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                </th>
+                                <td class="py-4 px-6">
+                                    
+                                </td>
+
+                                <td class="py-4 px-6">
+                                    
+                                </td>
+
+                                <td class="py-4 px-6">
+                                    <div class="mb-4">
+                                    <label for="promedio" class="block text-gray-700 text-sm font-bold mb-2">Promedio:</label>
+                                        <input wire:model="promedio" id="promedio" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+
+
+
+
+
+
 
                     <!-- end materias -->
 

@@ -19,6 +19,7 @@ class Students extends Component
     public $materia1,$materia2,$materia3,$materia4,$materia5,$materia6,$materia7;
     public $status1,$status2,$status3,$status4,$status5,$status6,$status7;
     public $aprobada1,$aprobada2,$aprobada3,$aprobada4,$aprobada5,$aprobada6,$aprobada7;
+    public $cal1,$cal2,$cal3,$cal4,$cal5,$cal6,$cal7,$promedio;
     public $modal = false;
     public $materias;
 
@@ -165,6 +166,14 @@ class Students extends Component
         $this->aprobada5 = $lesson->aprobada5;
         $this->aprobada6 = $lesson->aprobada6;
         $this->aprobada7 = $lesson->aprobada7;
+        $this->cal1 = $lesson->cal1;
+        $this->cal2 = $lesson->cal2;
+        $this->cal3 = $lesson->cal3;
+        $this->cal4 = $lesson->cal4;
+        $this->cal5 = $lesson->cal5;
+        $this->cal6 = $lesson->cal6;
+        $this->cal7 = $lesson->cal7;
+        $this->promedio = $lesson->promedio;
         // $this->limpiarCamposLesson();
         $this->abrirModalLesson();
     }
@@ -198,6 +207,15 @@ class Students extends Component
         $this->status5 = $lesson->status5;
         $this->status6 = $lesson->status6;
         $this->status7 = $lesson->status7;
+
+        $this->cal1 = $lesson->cal1;
+        $this->cal2 = $lesson->cal2;
+        $this->cal3 = $lesson->cal3;
+        $this->cal4 = $lesson->cal4;
+        $this->cal5 = $lesson->cal5;
+        $this->cal6 = $lesson->cal6;
+        $this->cal7 = $lesson->cal7;
+        $this->promedio = $lesson->promedio;
         // $this->id_userLesson = $lesson->id_user;
         // $this->id_studentLesson = $lesson->id_student;
         // Storage::url($this->image->store('public/images'));
@@ -221,7 +239,7 @@ class Students extends Component
 
         // $image=$this->image->store('public/images');
         // $url = Storage::url($image);
-
+        $promedio = $this->cal1+$this->cal2+$this->cal3+$this->cal4+$this->cal5+$this->cal6+$this->cal7;
         Lesson::updateOrCreate(['id'=>$this->id_lesson],
             [
                 'id_student' => $this->id_student,
@@ -233,6 +251,14 @@ class Students extends Component
                 'aprobada5' => $this->aprobada5,
                 'aprobada6' => $this->aprobada6,
                 'aprobada7' => $this->aprobada7,
+                'cal1' => $this->cal1,
+                'cal2' => $this->cal2,
+                'cal3' => $this->cal3,
+                'cal4' => $this->cal4,
+                'cal5' => $this->cal5,
+                'cal6' => $this->cal6,
+                'cal7' => $this->cal7,
+                'promedio' => $promedio/7,
             ]);
 
         //Student Area
