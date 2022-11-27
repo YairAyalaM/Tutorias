@@ -9,7 +9,7 @@ class Lesson extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'id_user','id_student'
+        'id_user','id_student','aprobada1','aprobada2','aprobada3','aprobada4','aprobada5','aprobada6','aprobada7',
     ];
 
     public function tutelado(){

@@ -215,10 +215,10 @@
                                     </td>
                                     <td class="py-4 px-6">
                                         <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select disabled wire:model="status1" id="status1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <select wire:model="aprobada1" id="aprobada1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                             <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Regular</option>
-                                            <option value="1">Recursada</option>
+                                            <option value="0">Aprobada</option>
+                                            <option value="1">Reprobada</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -244,10 +244,10 @@
 
                                     <td class="py-4 px-6">
                                         <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select disabled wire:model="status1" id="status1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <select wire:model="aprobada2" id="aprobada2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                             <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Regular</option>
-                                            <option value="1">Recursada</option>
+                                            <option value="0">Aprobada</option>
+                                            <option value="1">Reprobada</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -273,10 +273,10 @@
 
                                     <td class="py-4 px-6">
                                         <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select disabled wire:model="status1" id="status1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <select wire:model="aprobada3" id="aprobada3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                             <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Regular</option>
-                                            <option value="1">Recursada</option>
+                                            <option value="0">Aprobada</option>
+                                            <option value="1">Reprobada</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -302,10 +302,10 @@
 
                                     <td class="py-4 px-6">
                                         <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select disabled wire:model="status1" id="status1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <select wire:model="aprobada4" id="aprobada4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                             <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Regular</option>
-                                            <option value="1">Recursada</option>
+                                            <option value="0">Aprobada</option>
+                                            <option value="1">Reprobada</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -331,10 +331,10 @@
 
                                     <td class="py-4 px-6">
                                         <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select disabled wire:model="status1" id="status1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <select wire:model="aprobada5" id="aprobada5" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                             <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Regular</option>
-                                            <option value="1">Recursada</option>
+                                            <option value="0">Aprobada</option>
+                                            <option value="1">Reprobada</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -360,10 +360,10 @@
 
                                     <td class="py-4 px-6">
                                         <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select disabled wire:model="status1" id="status1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <select wire:model="aprobada6" id="aprobada6" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                             <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Regular</option>
-                                            <option value="1">Recursada</option>
+                                            <option value="0">Aprobada</option>
+                                            <option value="1">Reprobada</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -389,10 +389,10 @@
 
                                     <td class="py-4 px-6">
                                         <!-- <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label> -->
-                                        <select disabled wire:model="status1" id="status1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <select wire:model="aprobada7" id="aprobada7" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                             <option value="0" selected>Seleccionar</option>
-                                            <option value="0">Regular</option>
-                                            <option value="1">Recursada</option>
+                                            <option value="0">Aprobada</option>
+                                            <option value="1">Reprobada</option>
                                         </select>
                                     </td>
                                 </tr>

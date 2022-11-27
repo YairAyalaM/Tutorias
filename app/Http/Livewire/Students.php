@@ -18,6 +18,7 @@ class Students extends Component
     public $students,$matricula,$nombre,$apellido,$carrera,$semestre,$id_user,$id_student,$position;
     public $materia1,$materia2,$materia3,$materia4,$materia5,$materia6,$materia7;
     public $status1,$status2,$status3,$status4,$status5,$status6,$status7;
+    public $aprobada1,$aprobada2,$aprobada3,$aprobada4,$aprobada5,$aprobada6,$aprobada7;
     public $modal = false;
     public $materias;
 
@@ -157,6 +158,13 @@ class Students extends Component
         $this->id_lesson = $id;
         $this->id_userLesson = $lesson->id_user;
         $this->id_studentLesson = $lesson->id_student;
+        $this->aprobada1 = $lesson->aprobada1;
+        $this->aprobada2 = $lesson->aprobada2;
+        $this->aprobada3 = $lesson->aprobada3;
+        $this->aprobada4 = $lesson->aprobada4;
+        $this->aprobada5 = $lesson->aprobada5;
+        $this->aprobada6 = $lesson->aprobada6;
+        $this->aprobada7 = $lesson->aprobada7;
         // $this->limpiarCamposLesson();
         $this->abrirModalLesson();
     }
@@ -218,6 +226,13 @@ class Students extends Component
             [
                 'id_student' => $this->id_student,
                 'id_user' => auth()->id(),
+                'aprobada1' => $this->aprobada1,
+                'aprobada2' => $this->aprobada2,
+                'aprobada3' => $this->aprobada3,
+                'aprobada4' => $this->aprobada4,
+                'aprobada5' => $this->aprobada5,
+                'aprobada6' => $this->aprobada6,
+                'aprobada7' => $this->aprobada7,
             ]);
 
         //Student Area
