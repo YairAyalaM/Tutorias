@@ -70,7 +70,7 @@
 								<span class="bg-green-400 text-gray-50 rounded-md px-2">available</span>
 							</td>
 							<td class="p-3 ">
-								<a href="javascript:void(0)" wire:click.prevent='editar({{$student->id}})' class="text-gray-400 hover:text-gray-100 mr-2">
+								<a href="javascript:void(0)" wire:click.prevent='editarLesson({{$student->id}})' class="text-gray-400 hover:text-gray-100 mr-2">
 									<i class="material-icons-outlined text-base">visibility</i>
 								</a>
 								<a href="javascript:void(0)" wire:click.prevent='editar({{$student->id}})' class="text-gray-400 hover:text-gray-100  mx-2">

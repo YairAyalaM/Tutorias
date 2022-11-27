@@ -169,38 +169,162 @@
 
                     <!-- new form -->
 
-                   
-
-                   
-<div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" class="py-3 px-6">
-                    Product name
-                </th>
-                <th scope="col" class="py-3 px-6">
-                    Color
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    Apple MacBook Pro 17"
-                </th>
-                <td class="py-4 px-6">
-                    Sliver
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
 
 
-                    
 
-                   
+                    <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                    <th scope="col" class="py-3 px-6">
+                                        Materias
+                                    </th>
+                                    <th scope="col" class="py-3 px-6">
+                                        Color
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        <label for="materia1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                                        <select id="materia1" wire:model="materia1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option selected>Materia 1</option>
+                                            @foreach($materias as $materia)
+                                            <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                                            @endforeach
+                                        </select>
+                                    </th>
+                                    <td class="py-4 px-6">
+                                        <label for="status1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
+                                        <select id="status1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option value="0" selected>Regular</option>
+                                            <option value="1">Recursada</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        <label for="materia2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                                        <select id="materia2" wire:model="materia2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option selected>Materia 1</option>
+                                            @foreach($materias as $materia)
+                                            <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                                            @endforeach
+                                        </select>
+                                    </th>
+                                    <td class="py-4 px-6">
+                                        <label for="status2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
+                                        <select id="status2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option value="0" selected>Regular</option>
+                                            <option value="1">Recursada</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        <label for="materia3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                                        <select id="materia3" wire:model="materia3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option selected>Materia 1</option>
+                                            @foreach($materias as $materia)
+                                            <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                                            @endforeach
+                                        </select>
+                                    </th>
+                                    <td class="py-4 px-6">
+                                        <label for="status3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
+                                        <select id="status3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option value="0" selected>Regular</option>
+                                            <option value="1">Recursada</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        <label for="materia4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                                        <select id="materia4" wire:model="materia4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option selected>Materia 1</option>
+                                            @foreach($materias as $materia)
+                                            <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                                            @endforeach
+                                        </select>
+                                    </th>
+                                    <td class="py-4 px-6">
+                                        <label for="status4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
+                                        <select id="status4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option value="0" selected>Regular</option>
+                                            <option value="1">Recursada</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        <label for="materia5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                                        <select id="materia5" wire:model="materia5" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option selected>Materia 1</option>
+                                            @foreach($materias as $materia)
+                                            <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                                            @endforeach
+                                        </select>
+                                    </th>
+                                    <td class="py-4 px-6">
+                                        <label for="status5" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
+                                        <select id="status5" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option value="0" selected>Regular</option>
+                                            <option value="1">Recursada</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        <label for="materia6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                                        <select id="materia6" wire:model="materia6" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option selected>Materia 1</option>
+                                            @foreach($materias as $materia)
+                                            <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                                            @endforeach
+                                        </select>
+                                    </th>
+                                    <td class="py-4 px-6">
+                                        <label for="status6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
+                                        <select id="status6" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option value="0" selected>Regular</option>
+                                            <option value="1">Recursada</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        <label for="materia7" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                                        <select id="materia7" wire:model="materia7" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option selected>Materia 1</option>
+                                            @foreach($materias as $materia)
+                                            <option value="{{$materia->id}}">{{$materia->nom_materia}}</option>
+                                            @endforeach
+                                        </select>
+                                    </th>
+                                    <td class="py-4 px-6">
+                                        <label for="status7" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
+                                        <select id="status7" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option value="0" selected>Regular</option>
+                                            <option value="1">Recursada</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+
+
 
                     <!-- <div class="flex flex-col lg:flex-row  gap-4 mb-4">
                         <div class="mb-4">

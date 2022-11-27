@@ -140,10 +140,14 @@ class Students extends Component
          $this->limpiarCampos();
     }
 
-    //Lessons
-    public function crearLesson()
+    ///Lessons
+    public function crearLesson($id)
     {
-        $this->limpiarCamposLesson();
+        $lesson = Lesson::findOrFail($id);
+        $this->id_lesson = $id;
+        $this->id_userLesson = $lesson->id_user;
+        $this->id_studentLesson = $lesson->id_student;
+        // $this->limpiarCamposLesson();
         $this->abrirModalLesson();
     }
 
@@ -159,12 +163,27 @@ class Students extends Component
     }
     public function editarLesson($id)
     {
-        $lesson = Lesson::findOrFail($id);
-        $this->id_lesson = $id;
-        $this->id_userLesson = $lesson->id_user;
-        $this->id_studentLesson = $lesson->id_student;
+        $lesson = Student::findOrFail($id);
+        $this->id_student = $id;
+        $this->materia1 = $lesson->materia1;
+        $this->materia2 = $lesson->materia2;
+        $this->materia3 = $lesson->materia3;
+        $this->materia4 = $lesson->materia4;
+        $this->materia5 = $lesson->materia5;
+        $this->materia6 = $lesson->materia6;
+        $this->materia7 = $lesson->materia7;
+
+        $this->status1 = $lesson->status1;
+        $this->status2 = $lesson->status2;
+        $this->status3 = $lesson->status3;
+        $this->status4 = $lesson->status4;
+        $this->status5 = $lesson->status5;
+        $this->status6 = $lesson->status6;
+        $this->status7 = $lesson->status7;
+        // $this->id_userLesson = $lesson->id_user;
+        // $this->id_studentLesson = $lesson->id_student;
         // Storage::url($this->image->store('public/images'));
-        $this->abrirModal();
+        $this->abrirModalLesson();
     }
 
     public function deleteLesson(){
@@ -196,6 +215,22 @@ class Students extends Component
             ]);
         //  session()->flash('message',
         //     $this->id_asociacion ? '¡Actualización exitosa!' : '¡Alta Exitosa!');
+
+        //Student Area
+        Student::updateOrCreate(['id'=>$this->id_student],
+        [
+            'status1' => $this->status1,
+            'status2' => $this->status2,
+            'status3' => $this->status3,
+            'status4' => $this->status4,
+            'status5' => $this->status5,
+            'status6' => $this->status6,
+            'status7' => $this->status7,
+            // 'position' => $position,
+            // 'image' => $this->image->store('public/images')
+            //Storage::url es para cambiar la ruta a storage, debemos importar: use Illuminate\Support\Facades\Storage;
+            // 'image' => Storage::url($this->image->store('public/images'))
+        ]);
         $this->alert('success', 'Alta exitosa!', [
             'position' => 'center',
             'timer' => 3000,

@@ -15,4 +15,8 @@ class Student extends Model
     public function users(){
         return $this->belongsTo(User::class, 'id_user');//un estudiante pertenece a un tutor $this hace referencia a la clase
     }
+
+    public function lessons(){
+        return $this->belongsTo(lesson::class, 'id_lesson');//un estudiante pertenece a una tutoria $this hace referencia a la clase
+    }
 }

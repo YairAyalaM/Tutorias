@@ -11,4 +11,8 @@ class Lesson extends Model
     protected $fillable = [
         'id_user','id_student'
     ];
+
+    public function tutelado(){
+        return $this->hasMany(Lesson::class,'id'); //un tutor tiene muchos alumnos
+    }
 }
