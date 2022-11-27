@@ -17,6 +17,7 @@ class Students extends Component
 
     public $students,$matricula,$nombre,$apellido,$carrera,$semestre,$id_user,$id_student,$position;
     public $materia1,$materia2,$materia3,$materia4,$materia5,$materia6,$materia7;
+    public $status1,$status2,$status3,$status4,$status5,$status6,$status7;
     public $modal = false;
     public $materias;
 
@@ -79,6 +80,15 @@ class Students extends Component
         $this->materia6 = $student->materia6;
         $this->materia7 = $student->materia7;
         $this->id_user = $student->id_user;
+
+
+        $this->status1 = $student->status1;
+        $this->status2 = $student->status2;
+        $this->status3 = $student->status3;
+        $this->status4 = $student->status4;
+        $this->status5 = $student->status5;
+        $this->status6 = $student->status6;
+        $this->status7 = $student->status7;
         // Storage::url($this->image->store('public/images'));
         $this->abrirModal();
     }
@@ -115,13 +125,13 @@ class Students extends Component
                 'materia5' => $this->materia5,
                 'materia6' => $this->materia6,
                 'materia7' => $this->materia7,
-                'status1' => null,
-                'status2' => null,
-                'status3' => null,
-                'status4' => null,
-                'status5' => null,
-                'status6' => null,
-                'status7' => null,
+                'status1' => $this->status1,
+                'status2' => $this->status2,
+                'status3' => $this->status3,
+                'status4' => $this->status4,
+                'status5' => $this->status5,
+                'status6' => $this->status6,
+                'status7' => $this->status7,
                 'id_user' => auth()->id(),
                 // 'position' => $position,
                 // 'image' => $this->image->store('public/images')
