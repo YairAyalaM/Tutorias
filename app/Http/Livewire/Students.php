@@ -216,31 +216,11 @@ class Students extends Component
 
         Lesson::updateOrCreate(['id'=>$this->id_lesson],
             [
-                'id_student' => $this->id_studentLesson,
+                'id_student' => $this->id_student,
                 'id_user' => auth()->id(),
-                // 'position' => $position,
-                // 'image' => $this->image->store('public/images')
-                //Storage::url es para cambiar la ruta a storage, debemos importar: use Illuminate\Support\Facades\Storage;
-                // 'image' => Storage::url($this->image->store('public/images'))
             ]);
-        //  session()->flash('message',
-        //     $this->id_asociacion ? '¡Actualización exitosa!' : '¡Alta Exitosa!');
 
         //Student Area
-        Student::updateOrCreate(['id'=>$this->id_student],
-        [
-            'status1' => $this->status1,
-            'status2' => $this->status2,
-            'status3' => $this->status3,
-            'status4' => $this->status4,
-            'status5' => $this->status5,
-            'status6' => $this->status6,
-            'status7' => $this->status7,
-            // 'position' => $position,
-            // 'image' => $this->image->store('public/images')
-            //Storage::url es para cambiar la ruta a storage, debemos importar: use Illuminate\Support\Facades\Storage;
-            // 'image' => Storage::url($this->image->store('public/images'))
-        ]);
         $this->alert('success', 'Alta exitosa!', [
             'position' => 'center',
             'timer' => 3000,
