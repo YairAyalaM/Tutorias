@@ -29,6 +29,10 @@ class User extends Authenticatable
         'name', 'email', 'password','position'
     ];
 
+    public function students(){
+        return $this->hasMany(Student::class,'id'); //un tutor tiene muchos alumnos
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
