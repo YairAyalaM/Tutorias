@@ -172,14 +172,6 @@
 
 
                     <!-- new form -->
-
-
-
-
-
-
-                    <!-- materias -->
-
                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
@@ -445,7 +437,7 @@
 
 
                             <!-- Promedio -->
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <!-- <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 </th>
                                 <td class="py-4 px-6">
@@ -462,28 +454,27 @@
                                         <input wire:model="promedio" id="promedio" type="text" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor">
                                     </div>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
 
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Causas, efectos y las consecuencias de las materias reprobadas</label>
+                    <textarea wire:model="punto5" id="punto5" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escriba los motivos..."></textarea>
 
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Comparación de la situacion academica con el contacto anterior</label>
+                    <textarea wire:model="punto6" id="punto6" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escriba los motivos..."></textarea>
 
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Evaluación del cumplimiento de los compromisos del estudiante teniendo como referencia el contacto anterior</label>
+                    <textarea wire:model="punto7" id="punto7" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escriba los motivos..."></textarea>
 
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Describa el plan de acción tutorial que realizará:</label>
+                    <textarea wire:model="punto8" id="punto8" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Hábitos de estudio, orientación, asesoría, normatividad, desempeño etc..."></textarea>
 
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Describa los compromisos establecidos por el estudiante</label>
+                    <textarea wire:model="punto9" id="punto9" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escriba los motivos..."></textarea>
 
-
-
-
-
-
-                    <!-- end materias -->
-
-                    <!-- <div class="flex flex-col lg:flex-row  gap-4 mb-4">
-                        <div class="mb-4">
-                            <label for="image" class="block text-gray-700 text-sm font-bold mb-2">Imagen:</label>
-                            <input type="file" class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-secondarycolor" id="image" wire:model="image">
-                        </div>
-                    </div> -->
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Describa los compromisos establecidos por el tutor</label>
+                    <textarea wire:model="punto10" id="punto10" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escriba los motivos..."></textarea>
 
                 </div>
                 <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">

@@ -20,6 +20,7 @@ class Students extends Component
     public $status1,$status2,$status3,$status4,$status5,$status6,$status7;
     public $aprobada1,$aprobada2,$aprobada3,$aprobada4,$aprobada5,$aprobada6,$aprobada7;
     public $cal1,$cal2,$cal3,$cal4,$cal5,$cal6,$cal7,$promedio;
+    public $punto5,$punto6,$punto7,$punto8,$punto9,$punto10;
     public $modal = false;
     public $materias;
 
@@ -173,7 +174,12 @@ class Students extends Component
         $this->cal5 = $lesson->cal5;
         $this->cal6 = $lesson->cal6;
         $this->cal7 = $lesson->cal7;
-        $this->promedio = $lesson->promedio;
+        $this->punto5 = $lesson->punto5;
+        $this->punto6 = $lesson->punto5;
+        $this->punto7 = $lesson->punto5;
+        $this->punto8 = $lesson->punto5;
+        $this->punto9 = $lesson->punto5;
+        $this->punto10 = $lesson->punto10;
         // $this->limpiarCamposLesson();
         $this->abrirModalLesson();
     }
@@ -216,6 +222,12 @@ class Students extends Component
         $this->cal6 = $lesson->cal6;
         $this->cal7 = $lesson->cal7;
         $this->promedio = $lesson->promedio;
+        $this->punto5 = $lesson->punto5;
+        $this->punto6 = $lesson->punto5;
+        $this->punto7 = $lesson->punto5;
+        $this->punto8 = $lesson->punto5;
+        $this->punto9 = $lesson->punto5;
+        $this->punto10 = $lesson->punto10;
         // $this->id_userLesson = $lesson->id_user;
         // $this->id_studentLesson = $lesson->id_student;
         // Storage::url($this->image->store('public/images'));
@@ -259,6 +271,12 @@ class Students extends Component
                 'cal6' => $this->cal6,
                 'cal7' => $this->cal7,
                 'promedio' => $promedio/7,
+                'punto5' => $this->punto5,
+                'punto6' => $this->punto6,
+                'punto7' => $this->punto7,
+                'punto8' => $this->punto8,
+                'punto9' => $this->punto9,
+                'punto10' => $this->punto10,
             ]);
 
         //Student Area
