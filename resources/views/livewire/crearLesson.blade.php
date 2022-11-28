@@ -164,6 +164,7 @@
                 <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 scrollEdit" style="
     margin: 2rem auto;
     height: 510px;
+    width: 710px;
     overflow:
     auto;
     padding:0 1rem;
