@@ -476,6 +476,96 @@
                     <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Describa los compromisos establecidos por el tutor</label>
                     <textarea wire:model="punto10" id="punto10" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escriba los motivos..."></textarea>
 
+                    <!-- tabla range -->
+                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="py-3 px-6">
+                                    Materias
+                                </th>
+                                <th scope="col" class="py-3 px-6">
+                                    Escala estimada de actitud
+                                </th>
+                                <th scope="col" class="py-3 px-6">
+                                    A/NA
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <!-- <label for="materia1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
+                                    <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Reflexiva</label>
+                                </th>
+                                <td class="py-4 px-6">
+                                    <input id="minmax-range" type="range" min="0" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                                </td>
+                                <td class="py-4 px-6">
+                                <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Intuitiva</label>
+                                </td>
+                            </tr>
+
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <!-- <label for="materia1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
+                                    <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Concentrado</label>
+                                </th>
+                                <td class="py-4 px-6">
+                                    <input id="minmax-range" type="range" min="0" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                                </td>
+                                <td class="py-4 px-6">
+                                <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Distraido</label>
+                                </td>
+                            </tr>
+
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <!-- <label for="materia1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
+                                    <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Dispuesto</label>
+                                </th>
+                                <td class="py-4 px-6">
+                                    <input id="minmax-range" type="range" min="0" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                                </td>
+                                <td class="py-4 px-6">
+                                <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Fatigado</label>
+                                </td>
+                            </tr>
+
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <!-- <label for="materia1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
+                                    <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Interesado</label>
+                                </th>
+                                <td class="py-4 px-6">
+                                    <input id="minmax-range" type="range" min="0" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                                </td>
+                                <td class="py-4 px-6">
+                                <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Desinteresado</label>
+                                </td>
+                            </tr>
+
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <!-- <label for="materia1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> -->
+                                    <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Seguro</label>
+                                </th>
+                                <td class="py-4 px-6">
+                                    <input id="minmax-range" type="range" min="0" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                                </td>
+                                <td class="py-4 px-6">
+                                <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Vacilante</label>
+                                </td>
+                            </tr>
+
+
+                            <!-- Promedio -->
+
+                        </tbody>
+                    </table>
+                    <!-- end tabla range -->
+
+
+
                 </div>
                 <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                     <span class="p-1 flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto">
